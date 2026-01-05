@@ -15,7 +15,7 @@ function App() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      fetch("http://172.20.10.2:1234/api/data")
+      fetch("https://infoap-production.up.railway.app/api/data")
         .then((res) => res.json())
         .then((payload) => {
           setData(payload);
@@ -28,7 +28,7 @@ function App() {
   }, []);
 
   const handleConfirm = () => {
-    fetch("http://172.20.10.2:1234/api/confirm", { method: "POST" })
+    fetch("https://infoap-production.up.railway.app/api/confirm", { method: "POST" })
       .then(() => console.log("Alertă confirmată"))
       .catch((err) => console.error(err));
   };
