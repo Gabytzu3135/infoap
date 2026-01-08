@@ -72,7 +72,7 @@ const Sidebar = () => {
             </div>
           </NavLink>
           <div className="mt-10 flex justify-center items-center text-xs">
-            <p>BGS Security v0.02 @ 06/01/2026</p>
+            <p>BGS Security v0.03 @ 08/01/2026</p>
           </div>
         </div>
       </div>
@@ -110,3 +110,4 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
+
