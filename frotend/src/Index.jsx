@@ -95,7 +95,7 @@ function App() {
         <div className="mt-10 border border-[#dbdbdb] flex items-center justify-start lg:ml-60 rounded-2xl text-left text-sm p-5 font-bold h-20 hover:shadow-md transition-all duration-300 shadow-sm">
           <h1 className="text-left text-md">No active alerts at the moment.</h1>
         </div>
-      ) : (
+      ) : (data.isOnline &&
         <div className="mt-10 border border-[#dbdbdb] flex-col lg:ml-60 rounded-2xl  text-sm font-bold h-auto pb-5 shadow-sm hover:shadow-lg transition-all duration-300">
           <div className="flex border-b border-[#dbdbdb] h-15 p-2 rounded-t-xl justify-start items-center bg-orange-600">
             <h1 className="text-2xl p-5 text-white title ">
