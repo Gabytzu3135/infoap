@@ -41,6 +41,22 @@ const History = () => {
   return (
     <>
       <Sidebar />
+      <div className="flex justify-start lg:ml-60">
+        <h1 className="text-m inline-flex items-center gap-3">
+          <div
+            className={`w-3 h-3 ${
+              data.isOnline ? "bg-green-500" : "bg-red-500"
+            } rounded-full animate-pulse`}
+          ></div>
+          <p>ESP board is {data.isOnline ? "connected" : "disconnected"}.</p>
+        </h1>
+      </div>
+
+      {!data.isOnline && (
+        <div className="mt-10 bg-red-500 flex justify-start lg:ml-60 w-auto rounded-2xl text-white text-left text-sm p-5 font-bold shadow-md">
+          The ESP32 Board is not connected. You can't receive/manage any alerts.
+        </div>
+      )}
       <div className="lg:ml-60 flex justify-start mt-10">
         <h2 className="title text-3xl">Alert Logs</h2>
       </div>
@@ -68,3 +84,4 @@ const History = () => {
 };
 
 export default History;
+
