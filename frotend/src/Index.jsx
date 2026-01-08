@@ -91,7 +91,7 @@ function App() {
         <h1 className="title text-3xl">Alert Information</h1>
       </div>
 
-      {!data.activeAlert ? (
+      {!data.activeAlert || !data.isOnline ? (
         <div className="mt-10 border border-[#dbdbdb] flex items-center justify-start lg:ml-60 rounded-2xl text-left text-sm p-5 font-bold h-20 hover:shadow-md transition-all duration-300 shadow-sm">
           <h1 className="text-left text-md">No active alerts at the moment.</h1>
         </div>
